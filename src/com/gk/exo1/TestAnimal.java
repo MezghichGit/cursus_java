@@ -2,9 +2,12 @@ package com.gk.exo1;
 
 import java.util.Scanner;
 
+import com.gk.day2.Poisson;
+
 public class TestAnimal {
 
 	public static void main(String[] args) {
+		Poisson p1 =  new Poisson();
 		
 		//Correction exo 2
 		
