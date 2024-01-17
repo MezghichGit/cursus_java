@@ -2,9 +2,14 @@ package com.gk.day3;
 
 import java.time.Month;
 
-public class LesTypesJava {
+ class Animal{
+	
+}
 
-	public static void main(String[] args) {
+public class LesTypesJava {
+	
+
+	public static void main(String args[]) {
 		
 		// En Java, on a 8 types primitifs
 		//Les entiers
