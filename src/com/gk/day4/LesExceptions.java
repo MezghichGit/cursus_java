@@ -1,6 +1,30 @@
 package com.gk.day4;
 
+import java.util.Scanner;
+
 public class LesExceptions {
+	
+	public static void getData(Scanner sc) throws Exception
+	{
+		
+		System.out.println("Donner votre nom min 4 lettres");
+		String nom = sc.nextLine();
+		
+		if(nom.length()>4)
+			System.out.println("Nom valide : "+nom);
+		else
+			throw new Exception("Votre nom doit dépasser 4 caractères");
+		
+		System.out.println("Donner votre age : >0");
+		int age = sc.nextInt();
+		
+		if(age>0)
+			System.out.println("Age valide : "+age);
+		else
+			throw new Exception("Votre age doit être positif");
+		
+		
+	}
 
 	public static void division(int a, int b) throws ArithmeticException // peut déclencher une exception
 	{
@@ -13,6 +37,16 @@ public class LesExceptions {
 	}
 
 	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			getData(sc);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("Problème lors de la saisie de vos données : "+e.getMessage());
+		}
+		/*
 		System.out.println("Hello GK");
 		try {
 		   division(10,0);
@@ -22,7 +56,7 @@ public class LesExceptions {
 			System.out.println(e.getMessage());
 		}
 		
-		System.out.println("Fin du programme");
+		System.out.println("Fin du programme");*/
 		/*
 		 * int x = 10; int y = 5;
 		 */
