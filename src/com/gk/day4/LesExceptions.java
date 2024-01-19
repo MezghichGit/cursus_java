@@ -21,7 +21,7 @@ public class LesExceptions {
 			System.out.println("Donner votre nom min 4 lettres");
 			String nom = sc.nextLine();
 
-			if (nom.length() > 4)
+			if (nom.length() >= 4)
 				System.out.println("Nom valide : " + nom);
 			else
 				throw new Exception("Votre nom doit dépasser 4 caractères");
