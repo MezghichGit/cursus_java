@@ -1,6 +1,7 @@
 package com.gk.day5;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -18,7 +19,7 @@ public class LesStream {
 		Integer n1 = new Integer(12);
 		Integer n2 = new Integer(10);
 		System.out.println(n2.compareTo(n1));*/
-		
+		/*
 		List<String> list = new ArrayList<>();
 		list.add("pierre");
 		list.add("anne");
@@ -26,17 +27,28 @@ public class LesStream {
 		list.add("derwich");
 		list.add("teddy");
 		list.add("benoit");
-		System.out.println(list);
+		System.out.println(list);*/
 		
 		//Version 8: API Stream
 		//Stream<String> names = Stream.of("pièrre","anne","afef","derwich"); // création d'un stream
-		Stream<String> names = list.stream();
+		//Stream<String> names = list.stream();
 		//names.map(x->x.toUpperCase()).forEach(System.out::println);  // :: méthode de référence
 		//names.filter(x->x.contains("r")).sorted().forEach(System.out::println);
 		
-		long nbr = names.filter(x->x.contains("r")).peek(System.out::println).count();
-		System.out.println(nbr);
+		//long nbr = names.filter(x->x.contains("r")).peek(System.out::println).count();
+		//System.out.println(nbr);
 		//names.forEach(System.out::println);
+		
+		// Correction de l'exo 2
+		
+		List<Integer> nombres = Arrays.asList(14,12,1,18,34,6,3,11);
+		//Stream<Integer> sn = nombres.stream();
+		
+		//sn.filter(x->(x%2 ==0)).sorted().forEach(System.out::println);
+		
+		long nbPair = nombres.stream().filter(x->x%2==0 & x>10).sorted().peek(System.out::println).count();
+		
+		System.out.println(nbPair);
 		
 		
 
